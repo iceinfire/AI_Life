@@ -30,8 +30,5 @@ public class Graph {
 		bs.show();
 		frame.update(g);
 	}
-	public static void drawPlayer(int x, int y) {
-		g.setColor(Color.ORANGE);
-		g.fillOval(x, y, 10, 10);
-	}
+	
 }

@@ -27,7 +27,16 @@ public class Main {
 				updates=0;
 				frames=0;
 			}
+			try {
+				Thread.sleep(15);
+			} catch (InterruptedException e) {
+				crashExit(e);
+			}
 		}
+	}
+	public static void crashExit(Exception e) {
+		e.printStackTrace();
+		System.exit(1);
 	}
 	
 }

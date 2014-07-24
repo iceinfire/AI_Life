@@ -10,6 +10,7 @@ public class Person {
 	}
 	Random random = new Random();
 	public void update() {
+		
 		timer++;
 		int x = 0, y = 0;
 		if(timer==30) {
@@ -21,14 +22,14 @@ public class Person {
 			if(next_y+(y*10) > -10 &&  next_y+(y*10) < Graph.frame.getHeight()) next_y+=y;
 			timer=0;
 		}
-		if(next_x*10 > this.x) this.x+=3;
-		else this.x-=3;
-		if(next_y*10 > this.y) this.y+=3;
-		else this.y-=3;
+//		if(next_x*10 > this.x) this.x+=3;
+//		else this.x-=3;
+//		if(next_y*10 > this.y) this.y+=3;
+//		else this.y-=3;
 //		this.x = next_x*10;
 //		this.y = next_y*10;
 	}
 	public void render() {
-		Graph.drawPlayer(x, y);
+		Graph.drawPlayer(next_x, next_y);
 	}
 }

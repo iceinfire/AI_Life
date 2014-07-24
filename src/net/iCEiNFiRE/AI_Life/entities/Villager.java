@@ -7,12 +7,20 @@ import net.iCEiNFiRE.AI_Life.utils.Rand;
 
 public class Villager {
 
-	int posX;
-	int posY;
+	public int posX;
+	public int posY;
 	
 	Color color;
 	
+	/**
+	 * The direction the villager is facing / will move towards. <p>
+	 * See {@link net.iCEiNFiRE.AI_Life.utils.Rand#getRandDirection() getRandDirection()} for more infos.
+	 */
 	public int direction;
+	
+	/**
+	 * The speed on the villager's movement.
+	 */
 	int speed = 3;
 	
 	public Villager(int x, int y) {
@@ -25,11 +33,19 @@ public class Villager {
 		
 	}
 			
+	/**
+	 * Draw the villager, using the passed Graphics object, the preset color, position and size.
+	 * @param g
+	 */
 	public void draw(Graphics g) {
 		g.setColor(color);
 		g.fillOval(posX, posY, 10, 10);
 	}
 	
+	/**
+	 * Moves the villager of {@link Villager#speed int speed} towards {@link Villager#direction direction/direc}.
+	 * @param direc
+	 */
 	public void move(int direc) {
 		
 		switch (direc) {

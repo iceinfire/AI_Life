@@ -39,6 +39,8 @@ public class Main {
 				frames=0;
 			}
 		}
+		
+		System.exit(0);
 	}
 	
 }
